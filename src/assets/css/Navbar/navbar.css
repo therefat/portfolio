@@ -1,0 +1,130 @@
+/* navabar styel  */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; 
+    padding: 10px;
+  }
+  .navbar h1{
+    
+    display: inline-block;
+  }
+  .navbar .nav-menu {
+  
+    display: flex;
+    align-items: center;
+    
+   
+  }
+  .navbar ul li{
+    display: inline-block;
+    text-transform: uppercase;
+    
+  }
+.nav-menu a{
+    margin: 0 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: red;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+} 
+
+/* responsive  */
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 4rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+      padding: 0;
+      z-index: 2
+    
+    
+  }
+  .menus {
+    display: none;
+  }
+  .nav-menu.active {
+      left: 0;
+  }
+  
+  ul.nav-menu.active li {
+    margin: 0.8rem 0;
+  }
+  ul {
+    display: inline-block;
+  }
+  
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+  
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+  
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+  .skills-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+  .icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .icon img{
+    width: 50%;
+  }
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .project-list .card {
+    margin-top: 15px;
+  }
+  
+  }
+  .clearfix {
+    content: "";
+    clear: both;
+    display: table;
+  }
